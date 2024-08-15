@@ -1,8 +1,8 @@
 # 🐍 30 Days Of Python
 
-|# Day | Topics                                                    |
+|# 日期 | 主题                                                    |
 |------|:---------------------------------------------------------:|
-| 01  |  [Introduction](./readme.md)|
+| 01  |  [介绍](./readme.md)|
 | 02  |  [Variables, Built-in Functions](./02_Day_Variables_builtin_functions/02_variables_builtin_functions.md)|
 | 03  |  [Operators](./03_Day_Operators/03_operators.md)|
 | 04  |  [Strings](./04_Day_Strings/04_strings.md)|
