@@ -153,7 +153,7 @@ print(sum_of_numbers(10)) # 55
 print(sum_of_numbers(100)) # 5050
 ```
 
-- Two Parameter: A function may or may not have a parameter or parameters. A function may also have two or more parameters. If our function takes parameters we should call it with arguments. Let us check a function with two parameters:
+- 双参数：函数可能有也可能没有一个或多个参数。一个函数也可能有两个或多个参数。如果我们的函数有参数，我们应该用参数调用它。让我们检查一个有两个参数的函数:
 
 ```py
   # syntax
@@ -193,7 +193,7 @@ print('Weight of an object in Newtons: ', weight_of_object(100, 9.81))
 
 ### Passing Arguments with Key and Value
 
-If we pass the arguments with key and value, the order of the arguments does not matter.
+如果我们传递带有键和值的参数，则参数的顺序无关紧要。
 
 ```py
 # syntax
@@ -222,7 +222,7 @@ print(add_two_numbers(num2 = 3, num1 = 2)) # Order does not matter
 
 ### Function Returning a Value - Part 2
 
-If we do not return a value with a function, then our function is returning _None_ by default. To return a value with a function we use the keyword _return_ followed by the variable we are returning. We can return any kind of data types from a function.
+如果我们没有用函数返回值，那么我们的函数默认返回_None_。要使用函数返回值，我们使用关键字_return_后跟我们返回的变量。我们可以从函数中返回任何类型的数据。
 
 - Returning a string:
 **Example:**
@@ -283,7 +283,7 @@ print(find_even_numbers(10))
 
 ### Function with Default Parameters
 
-Sometimes we pass default values to parameters, when we invoke the function. If we do not pass arguments when calling the function, their default values will be used.
+有时，当我们调用函数时，我们会将默认值传递给参数。如果我们在调用函数时不传递参数，则将使用它们的默认值。
 
 ```py
 # syntax
@@ -327,7 +327,7 @@ print('Weight of an object in Newtons: ', weight_of_object(100, 1.62)) # gravity
 
 ### Arbitrary Number of Arguments
 
-If we do not know the number of arguments we pass to our function, we can create a function which can take arbitrary number of arguments by adding \* before the parameter name.
+如果我们不知道传递给函数的参数数量，我们可以通过在参数名称前添加\*来创建一个可以接受任意数量参数的函数。
 
 ```py
 # syntax
@@ -371,7 +371,7 @@ def do_something(f, x):
 print(do_something(square_number, 3)) # 27
 ```
 
-🌕 You achieved quite a lot so far.  Keep going! You have just completed day 11 challenges and you are 11 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 到目前为止，你取得了相当大的成就。继续前进！你刚刚完成了第11天的挑战，你正朝着伟大的方向前进11步。现在做一些锻炼你的大脑和肌肉。
 
 ## Testimony
 Now it is time to express your thoughts about the Author and 30DaysOfPython. You can leave your testimonial on this [link](https://testimonify.herokuapp.com/)
@@ -380,15 +380,15 @@ Now it is time to express your thoughts about the Author and 30DaysOfPython. You
 
 ### Exercises: Level 1
 
-1. Declare a function _add_two_numbers_. It takes two parameters and it returns a sum.
-2. Area of a circle is calculated as follows: area = π x r x r. Write a function that calculates _area_of_circle_.
-3. Write a function called add_all_nums which takes arbitrary number of arguments and sums all the arguments. Check if all the list items are number types. If not do give a reasonable feedback.
-4. Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. Write a function which converts °C to °F, _convert_celsius_to-fahrenheit_.
-5. Write a function called check-season, it takes a month parameter and returns the season: Autumn, Winter, Spring or Summer.
-6. Write a function called calculate_slope which return the slope of a linear equation
-7. Quadratic equation is calculated as follows: ax² + bx + c = 0. Write a function which calculates solution set of a quadratic equation, _solve_quadratic_eqn_.
-8. Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
-9. Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
+1.声明一个函数_add_two_numbers_。它接受两个参数，并返回一个和。
+2.圆的面积计算如下：面积=πx r x r。写一个函数来计算_Area_of_circle_。
+3.编写一个名为add_all_nums的函数，该函数接受任意数量的参数并对所有参数求和。检查所有列表项是否都是数字类型。如果没有，请给出合理的反馈。
+4.温度（°C）可使用以下公式转换为°F：°F=（°C x 9/5）+32。编写一个函数，将°C转换为°F，_convert_cellsius_to-fahrenheit_。
+5.编写一个名为check season的函数，它接受一个月份参数并返回季节：秋季、冬季、春季或夏季。
+6.编写一个名为calculate_slope的函数，返回线性方程的斜率
+7.二次方程计算如下：ax²+bx+c=0。编写一个函数来计算二次方程的解集_solve_quadratic_eqn_。
+8.声明一个名为print_list的函数。它接受一个列表作为参数，并打印出列表中的每个元素。
+9.声明一个名为reverse_list的函数。它接受一个数组作为参数，并返回数组的逆（使用循环）。
 
 ```py
 print(reverse_list([1, 2, 3, 4, 5]))
@@ -397,8 +397,8 @@ print(reverse_list1(["A", "B", "C"]))
 # ["C", "B", "A"]
 ```
 
-10. Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items
-11. Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
+10.声明一个名为capitale_list_items的函数。它接受一个列表作为参数，并返回一个大写的项目列表
+11.声明一个名为add_item的函数。它需要一个列表和一个项目参数。它返回一个列表，并在末尾添加项目。
 
 ```py
 food_staff = ['Potato', 'Tomato', 'Mango', 'Milk'];
@@ -407,7 +407,7 @@ numbers = [2, 3, 7, 9];
 print(add_item(numbers, 5))      [2, 3, 7, 9, 5]
 ```
 
-12. Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+12.声明一个名为remove_item的函数。它需要一个列表和一个项目参数。它返回一个列表，其中删除了项目。
 
 ```py
 food_staff = ['Potato', 'Tomato', 'Mango', 'Milk'];
@@ -416,7 +416,7 @@ numbers = [2, 3, 7, 9];
 print(remove_item(numbers, 3))  # [2, 7, 9]
 ```
 
-13. Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+13.声明一个名为sum_of_numbers的函数。它接受一个数字参数，并将该范围内的所有数字相加
 
 ```py
 print(sum_of_numbers(5))  # 15
@@ -424,12 +424,13 @@ print(sum_all_numbers(10)) # 55
 print(sum_all_numbers(100)) # 5050
 ```
 
-14. Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
-15. Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+14.声明一个名为sum_of_odds的函数。它接受一个数字参数，并将该范围内的所有奇数相加。
+15.声明一个名为sum_of_even的函数。它需要一个数字参数
+它将该范围内的所有偶数相加。
 
 ### Exercises: Level 2
 
-1.  Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+1.声明一个名为evens_and_odds的函数。它接受一个正整数作为参数，并计算数字中的偶数和赔率。
 
 ```py
     print(evens_and_odds(100))
@@ -437,21 +438,20 @@ print(sum_all_numbers(100)) # 5050
     # The number of evens are 51.
 ```
 
-1. Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
-1. Call your function _is_empty_, it takes a parameter and it checks if it is empty or not
-1. Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+1.调用你的函数factorial，它接受一个整数作为参数，并返回该数字的阶乘
+2.调用你的函数_is_empty_，它接受一个参数，并检查它是否为空
+3.编写接受列表的不同函数。他们应该计算_man、calculate_mdian、calculite_mode、calculated range、calculate variance和calculate_std（标准偏差）。
 
 ### Exercises: Level 3
 
-1. Write a function called is_prime, which checks if a number is prime.
-1. Write a functions which checks if all items are unique in the list.
-1. Write a function which checks if all the items of the list are of the same data type.
-1. Write a function which check if provided variable is a valid python variable
-1. Go to the data folder and access the countries-data.py file.
-
-- Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
-- Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order.
+1.编写一个名为is_prime的函数，它检查一个数字是否为素数。
+2.编写一个函数，检查列表中的所有项目是否都是唯一的。
+3.编写一个函数，检查列表中的所有项目是否具有相同的数据类型。
+4.编写一个函数，检查提供的变量是否是有效的python变量
+5.转到数据文件夹并访问countries-data.py文件。
+-创建一个名为most_spoken_languages的函数。它应该按降序返回世界上10或20种最常用的语言
+-创建一个名为most_populated_countries的函数。它应该按降序返回10或20个人口最多的国家。
 
 🎉 CONGRATULATIONS ! 🎉
 
-[<< Day 10](../10_Day_Loops/10_loops.md) | [Day 12 >>](../12_Day_Modules/12_modules.md)
+[<< 第十天](../10_Day_Loops/10_loops.md) | [第十二天 >>](../12_Day_Modules/12_modules.md)
