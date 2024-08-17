@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 11 - Functions</h1>
+  <h1> 30 天 Python：第十一天 - Functions</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -14,41 +14,41 @@
 
 </div>
 
-[<< Day 10](../10_Day_Loops/10_loops.md) | [Day 12 >>](../12_Day_Modules/12_modules.md)
+[<< 第十天](../10_Day_Loops/10_loops.md) | [第十二天 >>](../12_Day_Modules/12_modules.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 11](#-day-11)
-  - [Functions](#functions)
-    - [Defining a Function](#defining-a-function)
-    - [Declaring and Calling a Function](#declaring-and-calling-a-function)
-    - [Function without Parameters](#function-without-parameters)
-    - [Function Returning a Value - Part 1](#function-returning-a-value---part-1)
-    - [Function with Parameters](#function-with-parameters)
-    - [Passing Arguments with Key and Value](#passing-arguments-with-key-and-value)
-    - [Function Returning a Value - Part 2](#function-returning-a-value---part-2)
-    - [Function with Default Parameters](#function-with-default-parameters)
-    - [Arbitrary Number of Arguments](#arbitrary-number-of-arguments)
-    - [Default and Arbitrary Number of Parameters in Functions](#default-and-arbitrary-number-of-parameters-in-functions)
-    - [Function as a Parameter of Another Function](#function-as-a-parameter-of-another-function)
-  - [💻 Exercises: Day 11](#-exercises-day-11)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
-    - [Exercises: Level 3](#exercises-level-3)
+- [📘 第十一天](#-第十一天)
+  - [函数](#函数)
+    - [定义一个函数](#定义一个函数)
+    - [声明和调用一个函数](#声明和调用一个函数)
+    - [无参数的函数](#无参数的函数)
+    - [返回值的函数 - 第一部分](#f返回值的函数 - 第一部分)
+    - [声明带有参数的函数](#声明带有参数的函数)
+    - [使用关键字和值传递参数](#使用关键字和值传递参数)
+    - [返回值的函数 - 第二部分](#返回值的函数 - 第二部分)
+    - [带有默认参数的函数](#f带有默认参数的函数)
+    - [可变数量的参数](#可变数量的参数)
+    - [函数中的默认参数和可变数量的参数](#函数中的默认参数和可变数量的参数)
+    - [将函数作为另一个函数的参数](#将函数作为另一个函数的参数)
+  - [💻 练习：第十一天](#练习：第十一天)
+    - [练习：一级](#练习：一级)
+    - [练习：二级](#练习：二级)
+    - [练习：三级](#练习：三级)
 
 # 📘 Day 11
 
-## Functions
+## 函数
 
-So far we have seen many built-in Python functions. In this section, we will focus on custom functions. What is a function? Before we start making functions, let us learn what a function is and why we need them?
+到目前为止，我们已经看到了许多内置的 Python 函数。在这一节中，我们将重点介绍自定义函数。什么是函数？在开始创建函数之前，让我们先了解什么是函数以及为什么我们需要它们。
 
 ### Defining a Function
 
-A function is a reusable block of code or programming statements designed to perform a certain task. To define or declare a function, Python provides the _def_ keyword. The following is the syntax for defining a function. The function block of code is executed only if the function is called or invoked.
+函数是一个可重用的代码块或编程语句，旨在执行特定任务。为了定义或声明一个函数，Python提供了_def_关键字。以下是定义函数的语法。只有当函数被调用或调用时，才会执行函数代码块。
 
 ### Declaring and Calling a Function
 
-When we make a function, we call it declaring a function. When we start using the it,  we call it *calling* or *invoking* a function. Function can be declared with or without parameters.
+当我们创建一个函数时，我们称之为声明函数。当我们开始使用it时，我们称之为*调用*或*调用*函数。函数可以声明有或没有参数。
 
 ```py
 # syntax
@@ -62,7 +62,7 @@ function_name()
 
 ### Function without Parameters
 
-Function can be declared without parameters.
+函数可以在没有参数的情况下声明。
 
 **Example:**
 
@@ -85,7 +85,7 @@ add_two_numbers()
 
 ### Function Returning a Value - Part 1
 
-Function can also return values, if a function does not have a return statement, the value of the function is None. Let us rewrite the above functions using return. From now on, we get a value from a function when we call the function and print it.
+函数也可以返回值，如果函数没有return语句，则函数的值为None。让我们使用return重写上述函数。从现在开始，当我们调用函数并打印它时，我们会从函数中获取一个值。
 
 ```py
 def generate_full_name ():
@@ -106,9 +106,9 @@ print(add_two_numbers())
 
 ### Function with Parameters
 
-In a function we can pass different data types(number, string, boolean, list, tuple, dictionary or set) as a parameter
+在函数中，我们可以传递不同的数据类型（数字、字符串、布尔值、列表、元组、字典或集合）作为参数
 
-- Single Parameter: If our function takes a parameter we should call our function with an argument
+- 单参数：如果我们的函数有一个参数，我们应该用一个参数调用我们的函数
 
 ```py
   # syntax
