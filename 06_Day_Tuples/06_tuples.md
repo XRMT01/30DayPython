@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> 30 Days Of Python: Day 6 - Tuples</h1>
+  <h1> 30 天 Python：第六天 - Tuples</h1>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -9,55 +9,55 @@
 
 <sub>Author:
 <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> Second Edition: July, 2021</small>
+<small> 第二版：2021 年 7 月</small>
 </sub>
 
 </div>
 
-[<< Day 5](../05_Day_Lists/05_lists.md) | [Day 7 >>](../07_Day_Sets/07_sets.md)
+[<< 第五天](./05_lists.md) | [第七天 >>](./07_sets.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [Day 6:](#day-6)
-  - [Tuples](#tuples)
-    - [Creating a Tuple](#creating-a-tuple)
-    - [Tuple length](#tuple-length)
-    - [Accessing Tuple Items](#accessing-tuple-items)
-    - [Slicing tuples](#slicing-tuples)
-    - [Changing Tuples to Lists](#changing-tuples-to-lists)
-    - [Checking an Item in a Tuple](#checking-an-item-in-a-tuple)
-    - [Joining Tuples](#joining-tuples)
-    - [Deleting Tuples](#deleting-tuples)
-  - [💻 Exercises: Day 6](#-exercises-day-6)
-    - [Exercises: Level 1](#exercises-level-1)
-    - [Exercises: Level 2](#exercises-level-2)
+- [第六天:](#第六天)
+  - [元组](#元组)
+    - [如何创建元组](#如何创建元组)
+    - [元组长度](#元组长度)
+    - [获取元组项](#获取元组项)
+    - [元组切片](#元组切片)
+    - [将元组更改为列表](#将元组更改为列表)
+    - [检索元组中的项](#检索元组中的项)
+    - [连接元组](#连接元组)
+    - [删除元组](#删除元组)
+  - [💻 练习 - 第六天](#-练习---第六天)
+    - [练习： 1级](#练习-1级)
+    - [练习： 2级](#练习-2级)
 
-# Day 6:
+# 第六天:
 
-## Tuples
+## 元组
 
-A tuple is a collection of different data types which is ordered and unchangeable (immutable). Tuples are written with round brackets, (). Once a tuple is created, we cannot change its values. We cannot use add, insert, remove methods in a tuple because it is not modifiable (mutable). Unlike list, tuple has few methods. Methods related to tuples:
+元组是有序且不可变的不同数据类型的集合。一旦创建了元组，我们就无法更改其值。我们不能在元组中使用 add、insert、remove 方法，因为它是不可修改的（不可变的）。与列表不同，元组的方法很少。与元组相关的方法有：
 
-- tuple(): to create an empty tuple
-- count(): to count the number of a specified item in a tuple
-- index(): to find the index of a specified item in a tuple
-- + operator: to join two or more tuples and to create a new tuple
+- tuple()：创建一个空元组
+- count()：计算元组中指定项的数量
+- index()：查找元组中指定项的索引
+- + 运算符：连接两个或多个元组并创建一个新元组
 
-### Creating a Tuple
+### 如何创建元组
 
-- Empty tuple: Creating an empty tuple
-  
+- 创建一个空元组
+
   ```py
-  # syntax
+  # 语法
   empty_tuple = ()
-  # or using the tuple constructor
+  # 或使用元组构造函数
   empty_tuple = tuple()
   ```
 
-- Tuple with initial values
-  
+- 创建一个具有初始值的元组
+
   ```py
-  # syntax
+  # 语法
   tpl = ('item1', 'item2','item3')
   ```
 
@@ -65,24 +65,26 @@ A tuple is a collection of different data types which is ordered and unchangeabl
   fruits = ('banana', 'orange', 'mango', 'lemon')
   ```
 
-### Tuple length
 
-We use the _len()_ method to get the length of a tuple.
+### 元组长度
+
+我们使用 _len()_ 方法来获取元组的长度。
 
 ```py
-# syntax
+# 语法
 tpl = ('item1', 'item2', 'item3')
 len(tpl)
 ```
 
-### Accessing Tuple Items
+### 获取元组项
 
-- Positive Indexing
-  Similar to the list data type we use positive or negative indexing to access tuple items.
+
+- 正索引
+  与列表数据类型类似，我们使用正索引或负索引来访问元组项。
   ![Accessing tuple items](../images/tuples_index.png)
 
   ```py
-  # Syntax
+  # 语法
   tpl = ('item1', 'item2', 'item3')
   first_item = tpl[0]
   second_item = tpl[1]
@@ -96,12 +98,12 @@ len(tpl)
   last_fruit = fruits[las_index]
   ```
 
-- Negative indexing
-  Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second last and the negative of the list/tuple length refers to the first item.
+- 负索引
+  负索引是从末尾开始的，-1 表示最后一项，-2 表示倒数第二项，列表/元组长度的负数表示第一项。
   ![Tuple Negative indexing](../images/tuple_negative_indexing.png)
 
   ```py
-  # Syntax
+  # 语法
   tpl = ('item1', 'item2', 'item3','item4')
   first_item = tpl[-4]
   second_item = tpl[-3]
@@ -114,50 +116,51 @@ len(tpl)
   last_fruit = fruits[-1]
   ```
 
-### Slicing tuples
+### 元组切片
 
-We can slice out a sub-tuple by specifying a range of indexes where to start and where to end in the tuple, the return value will be a new tuple with the specified items.
+我们可以通过指定开始和结束的索引范围来切出子元组，返回值是一个包含指定项的新元组。
 
-- Range of Positive Indexes
+- 正索引范围
 
   ```py
-  # Syntax
+  # 语法
   tpl = ('item1', 'item2', 'item3','item4')
-  all_items = tpl[0:4]         # all items
-  all_items = tpl[0:]         # all items
-  middle_two_items = tpl[1:3]  # does not include item at index 3
+  all_items = tpl[0:4]         # 所有项
+  all_items = tpl[0:]         # 所有项
+  middle_two_items = tpl[1:3]  # 不包括索引 3 的项
   ```
 
   ```py
   fruits = ('banana', 'orange', 'mango', 'lemon')
-  all_fruits = fruits[0:4]    # all items
-  all_fruits= fruits[0:]      # all items
-  orange_mango = fruits[1:3]  # doesn't include item at index 3
+  all_fruits = fruits[0:4]    # 所有项
+  all_fruits= fruits[0:]      # 所有项
+  orange_mango = fruits[1:3]  # 不包括索引 3 的项
   orange_to_the_rest = fruits[1:]
   ```
 
-- Range of Negative Indexes
+- 负索引范围
 
   ```py
-  # Syntax
+  # 语法
   tpl = ('item1', 'item2', 'item3','item4')
-  all_items = tpl[-4:]         # all items
-  middle_two_items = tpl[-3:-1]  # does not include item at index 3 (-1)
+  all_items = tpl[-4:]         # 所有项
+  middle_two_items = tpl[-3:-1]  # 不包括索引 3 的项
   ```
 
   ```py
+
   fruits = ('banana', 'orange', 'mango', 'lemon')
-  all_fruits = fruits[-4:]    # all items
-  orange_mango = fruits[-3:-1]  # doesn't include item at index 3
+  all_fruits = fruits[-4:]    # 所有项
+  orange_mango = fruits[-3:-1]  # 不包括索引 3 的项
   orange_to_the_rest = fruits[-3:]
   ```
 
-### Changing Tuples to Lists
+### 将元组更改为列表
 
-We can change tuples to lists and lists to tuples. Tuple is immutable if we want to modify a tuple we should change it to a list.
+我们可以将元组更改为列表，将列表更改为元组。如果我们想修改元组，我们应该将其更改为列表。
 
 ```py
-# Syntax
+# 语法
 tpl = ('item1', 'item2', 'item3','item4')
 lst = list(tpl)
 ```
@@ -171,12 +174,12 @@ fruits = tuple(fruits)
 print(fruits)     # ('apple', 'orange', 'mango', 'lemon')
 ```
 
-### Checking an Item in a Tuple
+### 检索元组中的项
 
-We can check if an item exists or not in a tuple using _in_, it returns a boolean.
+我们可以使用 _in_ 检查元组中是否存在某个项，它返回一个布尔值。
 
 ```py
-# Syntax
+# 语法
 tpl = ('item1', 'item2', 'item3','item4')
 'item2' in tpl # True
 ```
@@ -188,12 +191,14 @@ print('apple' in fruits) # False
 fruits[0] = 'apple' # TypeError: 'tuple' object does not support item assignment
 ```
 
-### Joining Tuples
 
-We can join two or more tuples using + operator
+
+### 连接元组
+
+我们可以使用 + 运算符连接两个或多个元组
 
 ```py
-# syntax
+# 语法
 tpl1 = ('item1', 'item2', 'item3')
 tpl2 = ('item4', 'item5','item6')
 tpl3 = tpl1 + tpl2
@@ -205,12 +210,12 @@ vegetables = ('Tomato', 'Potato', 'Cabbage','Onion', 'Carrot')
 fruits_and_vegetables = fruits + vegetables
 ```
 
-### Deleting Tuples
+### 删除元组
 
-It is not possible to remove a single item in a tuple but it is possible to delete the tuple itself using _del_.
+不能删除元组中的单个项，但可以使用 _del_ 删除元组本身。
 
 ```py
-# syntax
+# 语法
 tpl1 = ('item1', 'item2', 'item3')
 del tpl1
 
@@ -221,34 +226,34 @@ fruits = ('banana', 'orange', 'mango', 'lemon')
 del fruits
 ```
 
-🌕 You are so brave, you made it to this far. You have just completed day 6 challenges and you are 6 steps a head in to your way to greatness. Now do some exercises for your brain and for your muscle.
 
-## 💻 Exercises: Day 6
+🌕 你太勇敢了，你做到了。你刚刚完成了第 6 天的挑战，你已向着伟大的目标迈出了 6 步。现在做一些练习来锻练你的大脑和肌肉。
 
-### Exercises: Level 1
+## 💻 练习 - 第六天
 
-1. Create an empty tuple
-2. Create a tuple containing names of your sisters and your brothers (imaginary siblings are fine)
-3. Join brothers and sisters tuples and assign it to siblings
-4. How many siblings do you have?
-5. Modify the siblings tuple and add the name of your father and mother and assign it to family_members
+### 练习： 1级
 
-### Exercises: Level 2
+1. 创建一个空元组
+1. 创建一个包含你姐妹和兄弟名字的元组（虚构的兄弟姐妹也可以）
+1. 连接兄弟姐妹元组并将其分配给 siblings
+1. 你有多少兄弟姐妹？
+1. 修改兄弟姐妹元组并添加你父母的名字，然后将其分配给 family_members
 
-1. Unpack siblings and parents from family_members
-1. Create fruits, vegetables and animal products tuples. Join the three tuples and assign it to a variable called food_stuff_tp.
-1. Change the about food_stuff_tp  tuple to a food_stuff_lt list
-1. Slice out the middle item or items from the food_stuff_tp tuple or food_stuff_lt list.
-1. Slice out the first three items and the last three items from food_staff_lt list
-1. Delete the food_staff_tp tuple completely
-1. Check if an item exists in  tuple:
+### 练习： 2级
 
-- Check if 'Estonia' is a nordic country
-- Check if 'Iceland' is a nordic country
+1. 从 family_members 中获取兄弟姐妹和父母
+1. 创建 fruits、vegetables 和 animal products 元组。连接三个元组并将其分配给名为 food_stuff_tp 的变量。
+1. 将 food_stuff_tp 元组更改为 food_stuff_lt 列表
+1. 从 food_stuff_tp 元组或 food_stuff_lt 列表中切出中间项或项。
+1. 从 food_staff_lt 列表中切出前三项和最后三项
+1. 完全删除 food_staff_tp 元组
+1. 检查元组中是否存在项：
+- 检查 'Estonia' 是否在 nordic_country 元组中
+- 检查 'Iceland' 是否在 nordic_country 元组中
 
   ```py
   nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
   ```
 
 
-[<< Day 5](../05_Day_Lists/05_lists.md) | [Day 7 >>](../07_Day_Sets/07_sets.md)
+[<< 第五天](./05_lists.md) | [第七天 >>](./07_sets.md)
