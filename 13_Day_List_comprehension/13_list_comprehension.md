@@ -28,18 +28,18 @@
 
 # 📘 Day 13
 
-## List Comprehension
+## 列表推导式
 
-List comprehension in Python is a compact way of creating a list from a sequence. It is a short way to create a new list. List comprehension is considerably faster than processing a list using the _for_ loop.
+Python 中的列表推导式是从序列创建列表的一种紧凑方式。这是创建新列表的捷径。列表推导比使用 for 循环处理列表要快得多。
 
 ```py
 # syntax
 [i for i in iterable if expression]
 ```
 
-**Example:1**
+**示例：1**
 
-For instance if you want to change a string to a list of characters. You can use a couple of methods. Let's see some of them:
+例如，如果要将字符串更改为字符列表。您可以使用几种方法。让我们看看其中的一些：
 
 ```py
 # One way
@@ -55,9 +55,9 @@ print(lst)       # ['P', 'y', 't', 'h', 'o', 'n']
 
 ```
 
-**Example:2**
+**示例：2**
 
-For instance if you want to generate a list of numbers
+例如，如果您想生成一个数字列表
 
 ```py
 # Generating numbers
@@ -74,9 +74,9 @@ print(numbers)                             # [(0, 0), (1, 1), (2, 4), (3, 9), (4
 
 ```
 
-**Example:2**
+**示例：3**
 
-List comprehension can be combined with if expression
+列表推导式可以与 if 表达式结合使用
 
 
 ```py
@@ -98,14 +98,12 @@ flattened_list = [ number for row in list_of_lists for number in row]
 print(flattened_list)    # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-## Lambda Function
+## Lambda 函数
 
-Lambda function is a small anonymous function without a name. It can take any number of arguments, but can only have one expression. Lambda function is similar to anonymous functions in JavaScript. We need it when we want to write an anonymous function inside another function.
+Lambda 函数是一个没有名称的小型匿名函数。它可以接受任意数量的参数，但只能有一个表达式。Lambda 函数类似于 JavaScript 中的匿名函数。当我们想在另一个函数中编写一个匿名函数时，我们需要它。
+### 创建 Lambda 函数
 
-### Creating a Lambda Function
-
-To create a lambda function we use _lambda_ keyword followed by a parameter(s), followed by an expression. See the syntax and the example below. Lambda function does not use return but it explicitly returns the expression.
-
+要创建 lambda 函数，我们使用 _lambda_ 关键字，后跟一个参数，后跟一个表达式。请参阅下面的语法和示例。Lambda 函数不使用 return，但它显式返回表达式。
 ```py
 # syntax
 x = lambda param1, param2, param3: param1 + param2 + param2
@@ -137,9 +135,9 @@ multiple_variable = lambda a, b, c: a ** 2 - 3 * b + 4 * c
 print(multiple_variable(5, 5, 3)) # 22
 ```
 
-### Lambda Function Inside Another Function
+### Lambda 函数在另一个函数中
 
-Using a lambda function inside another function.
+在另一个函数中使用 lambda 函数。
 
 ```py
 def power(x):
@@ -151,15 +149,15 @@ two_power_of_five = power(2)(5)
 print(two_power_of_five)  # 32
 ```
 
-🌕 Keep up the good work. Keep the momentum going, the sky is the limit! You have just completed day 13 challenges and you are 13 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 继续努力。保持势头，天空是极限！您刚刚完成了第 13 天的挑战，距离通往伟大的道路还有 13 步。现在为您的大脑和肌肉做一些锻炼。
 
-## 💻 Exercises: Day 13
+## 💻 练习：第 13 天
 
-1. Filter only negative and zero in the list using list comprehension
+1. 使用列表推导式仅过滤列表中的负值和零
    ```py
    numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
    ```
-2. Flatten the following list of lists of lists to a one dimensional list :
+2.将以下列表列表拼合为一维列表：
 
    ```py
    list_of_lists =[[[1, 2, 3]], [[4, 5, 6]], [[7, 8, 9]]]
@@ -168,7 +166,7 @@ print(two_power_of_five)  # 32
    [1, 2, 3, 4, 5, 6, 7, 8, 9]
    ```
 
-3. Using list comprehension create the following list of tuples:
+3. 使用列表推导式创建以下 Tuples 列表：
    ```py
    [(0, 1, 0, 0, 0, 0, 0),
    (1, 1, 1, 1, 1, 1, 1),
@@ -182,13 +180,13 @@ print(two_power_of_five)  # 32
    (9, 1, 9, 81, 729, 6561, 59049),
    (10, 1, 10, 100, 1000, 10000, 100000)]
    ```
-4. Flatten the following list to a new list:
+4. 将以下列表拼合为新列表：
    ```py
    countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
    output:
    [['FINLAND','FIN', 'HELSINKI'], ['SWEDEN', 'SWE', 'STOCKHOLM'], ['NORWAY', 'NOR', 'OSLO']]
    ```
-5. Change the following list to a list of dictionaries:
+5. 将以下列表更改为词典列表：
    ```py
    countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
    output:
@@ -196,13 +194,13 @@ print(two_power_of_five)  # 32
    {'country': 'SWEDEN', 'city': 'STOCKHOLM'},
    {'country': 'NORWAY', 'city': 'OSLO'}]
    ```
-6. Change the following list of lists to a list of concatenated strings:
+6. 将以下列表列表更改为串联字符串列表：
    ```py
    names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
    output
    ['Asabeneh Yetaeyeh', 'David Smith', 'Donald Trump', 'Bill Gates']
    ```
-7. Write a lambda function which can solve a slope or y-intercept of linear functions.
+7.编写一个 lambda 函数，该函数可以求解线性函数的斜率或 y 截距。
 
 🎉 CONGRATULATIONS ! 🎉
 
