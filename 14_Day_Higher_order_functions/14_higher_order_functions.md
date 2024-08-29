@@ -35,24 +35,24 @@
     - [Exercises: Level 2](#exercises-level-2)
     - [Exercises: Level 3](#exercises-level-3)
 
-# 📘 Day 14
+# 📚 第 14 天
 
-## Higher Order Functions
+## 高阶函数
 
-In Python functions are treated as first class citizens, allowing you to perform the following operations on functions:
+在 Python 中，函数被视为一等公民，允许您对函数执行以下操作：
 
-- A function can take one or more functions as parameters
-- A function can be returned as a result of another function
-- A function can be modified
-- A function can be assigned to a variable
+- 函数可以接受一个或多个函数作为参数
+- 函数可以作为另一个函数的结果返回
+- 函数可以被修改
+- 函数可以被赋值给变量
 
-In this section, we will cover:
+在这一节中，我们将涵盖：
 
-1. Handling functions as parameters
-2. Returning functions as return value from another functions
-3. Using Python closures and decorators
+1. 处理函数作为参数
+2. 返回函数作为另一个函数的返回值
+3. 使用 Python 闭包和装饰器
 
-### Function as a Parameter
+### 函数作为参数
 
 ```py
 def sum_numbers(nums):  # normal function
@@ -65,7 +65,7 @@ result = higher_order_function(sum_numbers, [1, 2, 3, 4, 5])
 print(result)       # 15
 ```
 
-### Function as a Return Value
+### 函数作为返回值
 
 ```py
 def square(x):          # a square function
@@ -96,11 +96,11 @@ result = higher_order_function('absolute')
 print(result(-3))      # 3
 ```
 
-You can see from the above example that the higher order function is returning different functions depending on the passed parameter
+从上面的例子中可以看出，高阶函数根据传递的参数返回不同的函数
 
-## Python Closures
+## Python 闭包
 
-Python allows a nested function to access the outer scope of the enclosing function. This is is known as a Closure. Let us have a look at how closures work in Python. In Python, closure is created by nesting a function inside another encapsulating function and then returning the inner function. See the example below.
+Python 允许嵌套函数访问封闭函数的外部范围。这被称为 Closure。让我们看看 Python 中的闭包是如何工作的。在 Python 中，闭包是通过将一个函数嵌套在另一个封装函数中，然后返回内部函数来创建的。请参阅下面的示例。
 
 **Example:**
 
@@ -116,15 +116,15 @@ print(closure_result(5))  # 15
 print(closure_result(10))  # 20
 ```
 
-## Python Decorators
+## Python 装饰器
 
-A decorator is a design pattern in Python that allows a user to add new functionality to an existing object without modifying its structure. Decorators are usually called before the definition of a function you want to decorate.
+装饰器是 Python 中的一种设计模式，它允许用户在不修改其结构的情况下向现有对象添加新功能。装饰器通常在要装饰的函数定义之前调用。
 
-### Creating Decorators
+### 创建装饰器
 
-To create a decorator function, we need an outer function with an inner wrapper function.
+要创建一个装饰器函数，我们需要一个带有内部包装函数的 outer 函数。
 
-**Example:**
+**例：**
 
 ```py
 # Normal function
@@ -156,7 +156,7 @@ print(greeting())   # WELCOME TO PYTHON
 
 ```
 
-### Applying Multiple Decorators to a Single Function
+### 将多个装饰器应用于单个函数
 
 ```py
 
@@ -187,9 +187,9 @@ def greeting():
 print(greeting())   # WELCOME TO PYTHON
 ```
 
-### Accepting Parameters in Decorator Functions
+### 在 Decorator 函数中接受参数
 
-Most of the time we need our functions to take parameters, so we might need to define a decorator that accepts parameters.
+大多数时候，我们需要我们的函数接受参数，因此我们可能需要定义一个接受参数的装饰器。
 
 ```py
 def decorator_with_parameters(function):
@@ -206,14 +206,14 @@ def print_full_name(first_name, last_name, country):
 print_full_name("Asabeneh", "Yetayeh",'Finland')
 ```
 
-## Built-in Higher Order Functions
+## 内置高阶函数
 
-Some of the built-in higher order functions that we cover in this part are _map()_, _filter_, and _reduce_.
-Lambda function can be passed as a parameter and the best use case of lambda functions is in functions like map, filter and reduce.
+我们在这部分介绍的一些内置高阶函数是 _map（）_、_filter_ 和 _reduce_。
+Lambda 函数可以作为参数传递，Lambda 函数的最佳用例是在 map、filter 和 reduce 等函数中。
 
-### Python - Map Function
+### Python - 映射函数
 
-The map() function is a built-in function that takes a function and iterable as parameters.
+map（） 函数是一个内置函数，它接受一个函数和可迭代对象作为参数。
 
 ```py
     # syntax
@@ -257,11 +257,11 @@ names_upper_cased = map(lambda name: name.upper(), names)
 print(list(names_upper_cased))    # ['ASABENEH', 'LIDIYA', 'ERMIAS', 'ABRAHAM']
 ```
 
-What actually map does is iterating over a list. For instance, it changes the names to upper case and returns a new list.
+map 实际上所做的是迭代一个列表。例如，它将名称更改为大写并返回一个新列表。
 
-### Python - Filter Function
+### Python - 过滤函数
 
-The filter() function calls the specified function which returns boolean for each item of the specified iterable (list). It filters the items that satisfy the filtering criteria.
+filter（） 函数调用指定的函数，该函数为指定的可迭代对象 （list） 的每个项目返回布尔值。它筛选满足筛选条件的项目。
 
 ```py
     # syntax
@@ -309,10 +309,10 @@ long_names = filter(is_name_long, names)
 print(list(long_names))         # ['Asabeneh']
 ```
 
-### Python - Reduce Function
+### Python - Reduce 函数
 
-The _reduce()_ function is defined in the functools module and we should import it from this module. Like map and filter it takes two parameters, a function and an iterable. However, it does not return another iterable, instead it returns a single value.
-**Example:1**
+_reduce（）_ 函数在 functools 模块中定义，我们应该从该模块导入它。像 map 和 filter 一样，它需要两个参数，一个 function 和一个 iterable。但是，它不会返回另一个可迭代对象，而是返回单个值。
+**例子：1**
 
 ```py
 numbers_str = ['1', '2', '3', '4', '5']  # iterable
@@ -331,24 +331,24 @@ names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Exercises: Level 1
+### 练习： 级别 1
 
-1. Explain the difference between map, filter, and reduce.
-2. Explain the difference between higher order function, closure and decorator
-3. Define a call function before map, filter or reduce, see examples.
-4. Use for loop to print each country in the countries list.
-5. Use for to print each name in the names list.
-6. Use for to print each number in the numbers list.
+1. 解释 map、filter 和 reduce 之间的区别。
+2. 解释高阶函数、闭包和装饰器之间的区别
+3. 在 map、filter 或 reduce 之前定义一个 call 函数，参见示例。
+4. 使用 for 循环打印国家/地区列表中的每个国家/地区。
+5. 用于打印名称列表中的每个名称。
+6. 用于打印数字列表中的每个数字。
 
-### Exercises: Level 2
+### 练习： 级别 2
 
-1. Use map to create a new list by changing each country to uppercase in the countries list
-1. Use map to create a new list by changing each number to its square in the numbers list
-1. Use map to change each name to uppercase in the names list
-1. Use filter to filter out countries containing 'land'.
-1. Use filter to filter out countries having exactly six characters.
-1. Use filter to filter out countries containing six letters and more in the country list.
-1. Use filter to filter out countries starting with an 'E'
+1. 使用 map 创建一个新列表，方法是将 countries 列表中的每个国家/地区更改为大写
+1. 使用地图创建一个新列表，方法是将每个数字更改为数字列表中的正方形
+1. 使用 map 将名称列表中的每个名称更改为大写
+1. 使用过滤器过滤掉包含 'land' 的国家/地区。
+1. 使用 filter 过滤掉正好有 6 个字符的国家/地区。
+1. 使用过滤器过滤掉国家/地区列表中包含 6 个或更多字母的国家/地区。
+1. 使用过滤器过滤掉以“E”开头的国家/地区
 1. Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
 1. Declare a function called get_string_lists which takes a list as a parameter and then returns a list containing only string items.
 1. Use reduce to sum all the numbers in the numbers list.
@@ -358,12 +358,12 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 2. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
 1. Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
 
-### Exercises: Level 3
+### 练习： 级别 3
 
-1. Use the countries_data.py (https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file and follow the tasks below:
-   - Sort countries by name, by capital, by population
-   - Sort out the ten most spoken languages by location.
-   - Sort out the ten most populated countries.
+1. 使用 countries_data.py （https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py） 文件并执行以下任务：
+   - 按名称、首都、人口对国家/地区进行排序
+   - 按位置整理出使用最多的十种语言。
+   - 整理出人口最多的 10 个国家。
 
 🎉 CONGRATULATIONS ! 🎉
 
