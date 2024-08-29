@@ -40,15 +40,15 @@
 
 # 📘 Day 12
 
-## Modules
+## 模块
 
-### What is a Module
+### 什么是模块
 
-A module is a file containing a set of codes or a set of functions which can be included to an application. A module could be a file containing a single variable, a function or a big code base.
+模块是一个包含一系列代码或一组函数的文件，这些代码或函数可以被包含到应用程序中。一个模块可以是一个包含单一变量、一个函数或一大段代码的文件。
 
-### Creating a Module
+### 创建模块
 
-To create a module we write our codes in a python script and we save it as a .py file. Create a file named mymodule.py inside your project folder. Let us write some code in this file.
+要创建一个模块，我们需要将代码写在一个 Python 脚本中，并将其保存为 .py 文件。在你的项目文件夹中创建一个名为 mymodule.py 的文件。让我们在这个文件中写一些代码。
 
 ```py
 # mymodule.py file
@@ -60,8 +60,7 @@ Create main.py file in your project directory and import the mymodule.py file.
 
 ### Importing a Module
 
-To import the file we use the _import_ keyword and the name of the file only.
-
+要导入这个文件，我们使用 import 关键字和文件名
 ```py
 # main.py file
 import mymodule
@@ -70,7 +69,7 @@ print(mymodule.generate_full_name('Asabeneh', 'Yetayeh')) # Asabeneh Yetayeh
 
 ### Import Functions from a Module
 
-We can have many functions in a file and we can import all the functions differently.
+我们可以在一个文件中拥有多个函数，并且我们可以以不同的方式导入所有的函数
 
 ```py
 # main.py file
@@ -83,9 +82,9 @@ print(weight)
 print(person['firstname'])
 ```
 
-### Import Functions from a Module and Renaming
+### 从模块导入函数并重命名
 
-During importing we can rename the name of the module.
+在导入时，我们可以重命名模块的名称。
 
 ```py
 # main.py file
@@ -99,13 +98,13 @@ print(p)
 print(p['firstname'])
 ```
 
-## Import Built-in Modules
+## 导入内置模块
 
-Like other programming languages we can also import modules by importing the file/function using the key word _import_. Let's import the common module we will use most of the time. Some of the common built-in modules: _math_, _datetime_, _os_,_sys_, _random_, _statistics_, _collections_, _json_,_re_
+就像其他编程语言一样，我们也可以通过使用 import 关键字来导入文件/函数。让我们导入我们最常用的常见模块。一些常见的内置模块包括：math、datetime、os、sys、random、statistics、collections、json 和 re。
 
-### OS Module
+### OS 模块
 
-Using python _os_ module it is possible to automatically perform many operating system tasks. The OS module in Python provides functions for creating, changing current working directory, and removing a directory (folder), fetching its contents, changing and identifying the current directory.
+使用 Python 的 os 模块，可以自动执行许多操作系统任务。Python 中的 OS 模块提供了用于创建目录、更改当前工作目录、删除目录（文件夹）、获取其内容、更改和识别当前目录等功能。
 
 ```py
 # import the module
@@ -120,11 +119,10 @@ os.getcwd()
 os.rmdir()
 ```
 
-### Sys Module
+### Sys 模块
 
-The sys module provides functions and variables used to manipulate different parts of the Python runtime environment. Function sys.argv returns a list of command line arguments passed to a Python script. The item at index 0 in this list is always the name of the script, at index 1 is the argument passed from the command line.
-
-Example of a script.py file:
+sys 模块提供了用于操作 Python 运行时环境不同部分的函数和变量。sys.argv 函数返回一个列表，其中包含了传递给 Python 脚本的命令行参数。列表中的第 0 个元素总是脚本的名字，第 1 个元素是从命令行传入的参数。
+script.py 文件示例：
 
 ```py
 import sys
@@ -132,7 +130,7 @@ import sys
 print('Welcome {}. Enjoy  {} challenge!'.format(sys.argv[1], sys.argv[2]))
 ```
 
-Now to check how this script works I wrote in command line:
+现在为了检查这个脚本是如何工作的，我在命令行中编写了：
 
 ```sh
 python script.py Asabeneh 30DaysOfPython
@@ -144,7 +142,7 @@ The result:
 Welcome Asabeneh. Enjoy  30DayOfPython challenge! 
 ```
 
-Some useful sys commands:
+一些有用的 sys 命令：
 
 ```py
 # to exit sys
@@ -157,9 +155,9 @@ sys.path
 sys.version
 ```
 
-### Statistics Module
+### 统计模块
 
-The statistics module provides functions for mathematical statistics of numeric data. The popular statistical functions which are defined in this module: _mean_, _median_, _mode_, _stdev_ etc.
+statistics 模块提供了用于数值数据的数理统计的函数。本模块中定义的常用统计函数：_mean_、_median_、_mode_、_stdev_ 等。
 
 ```py
 from statistics import * # importing all the statistics modules
@@ -170,9 +168,9 @@ print(mode(ages))       # 20
 print(stdev(ages))      # ~2.3
 ```
 
-### Math Module
+### 数学模块
 
-Module containing many mathematical operations and constants.
+包含许多数学运算和常量的模块。
 
 ```py
 import math
@@ -184,14 +182,14 @@ print(math.ceil(9.81))   # 10, rounding to the highest
 print(math.log10(100))   # 2, logarithm with 10 as base
 ```
 
-Now, we have imported the *math* module which contains lots of function which can help us to perform mathematical calculations. To check what functions the module has got, we can use _help(math)_, or _dir(math)_. This will display the available functions in the module. If we want to import only a specific function from the module we import it as follows:
+现在，我们已经导入了 math 模块，其中包含许多可以帮助我们进行数学计算的函数。要检查模块有哪些函数，我们可以使用 _help（math）_ 或 _dir（math）_。这将显示模块中的可用功能。如果我们想只从模块中导入一个特定的函数，我们按如下方式导入它：
 
 ```py
 from math import pi
 print(pi)
 ```
 
-It is also possible to import multiple functions at once
+也可以一次导入多个函数
 
 ```py
 
@@ -205,7 +203,7 @@ print(math.log10(100))    # 2
 
 ```
 
-But if we want to import all the function in math module we can use \* .
+但是如果我们想导入 math 模块中的所有函数，我们可以使用 * 。
 
 ```py
 from math import *
@@ -217,16 +215,16 @@ print(ceil(9.81))          # 10, rounding to the highest
 print(math.log10(100))     # 2
 ```
 
-When we import we can also rename the name of the function.
+当我们导入时，我们还可以重命名函数的名称。
 
 ```py
 from math import pi as  PI
 print(PI) # 3.141592653589793
 ```
 
-### String Module
+### 字符串 模块
 
-A string module is a useful module for many purposes. The example below shows some use of the string module.
+字符串模块是一个用于多种用途的有用模块。下面的示例显示了 string 模块的一些用法。
 
 ```py
 import string
@@ -237,7 +235,7 @@ print(string.punctuation)   # !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
 
 ### Random Module
 
-By now you are familiar with importing modules. Let us do one more import to get very familiar with it. Let us import _random_ module which gives us a random number between 0 and 0.9999.... The _random_ module has lots of functions but in this section we will only use _random_ and _randint_.
+到目前为止，您已经熟悉了导入模块。让我们再做一次导入以非常熟悉它。让我们导入 _random_ 模块，它给我们一个介于 0 和 0.9999 之间的随机数......_random_ 模块有很多函数，但在本节中，我们将只使用 _random_ 和 _randint_。
 
 ```py
 from random import random, randint
@@ -245,18 +243,18 @@ print(random())   # it doesn't take any arguments; it returns a value between 0 
 print(randint(5, 20)) # it returns a random integer number between [5, 20] inclusive
 ```
 
-🌕 You are going far. Keep going! You have just completed day 12 challenges and you are 12 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 你要走很远。继续前进！您刚刚完成了第 12 天的挑战，距离通往伟大的道路还有 12 步。现在为您的大脑和肌肉做一些锻炼。
 
-## 💻 Exercises: Day 12
+## 💻 练习：第 12 天
 
-### Exercises: Level 1
+### 练习： 级别 1
 
-1. Writ a function which generates a six digit/character random_user_id.
+1. 编写一个生成 6 位/字符random_user_id的函数。
    ```py
      print(random_user_id());
      '1ee33d'
    ```
-2. Modify the previous task. Declare a function named user_id_gen_by_user. It doesn’t take any parameters but it takes two inputs using input(). One of the inputs is the number of characters and the second input is the number of IDs which are supposed to be generated.
+2. 修改上一个任务。声明一个名为 user_id_gen_by_user 的函数。它不需要任何参数，但它使用 input（） 需要两个输入。其中一个输入是字符数，第二个输入是应该生成的 ID 数。
    
 ```py
 print(user_id_gen_by_user()) # user input: 5 5
@@ -275,18 +273,18 @@ print(user_id_gen_by_user()) # 16 5
 #dIV0SSUTgAdKwStr
 ```
 
-3. Write a function named rgb_color_gen. It will generate rgb colors (3 values ranging from 0 to 255 each).
+3. 编写一个名为 rgb_color_gen 的函数。它将生成 rgb 颜色（3 个值，每个值范围从 0 到 255）。
    
 ```py
 print(rgb_color_gen())
 # rgb(125,244,255) - the output should be in this form
 ```
 
-### Exercises: Level 2
+### 练习： 级别 2
 
-1. Write a function list_of_hexa_colors which returns any number of hexadecimal colors in an array (six hexadecimal numbers written after #. Hexadecimal numeral system is made out of 16 symbols, 0-9 and first 6 letters of the alphabet, a-f. Check the task 6 for output examples).
-1. Write a function list_of_rgb_colors which returns any number of RGB colors in an array.
-1. Write a function generate_colors which can generate any number of hexa or rgb colors.
+1. 编写一个函数list_of_hexa_colors该函数在数组中返回任意数量的十六进制颜色（写在 # 之后的六个十六进制数字）。十六进制数字系统由 16 个符号 0-9 和字母表的前 6 个字母 a-f 组成。检查任务 6 以获取输出示例）。
+2. 编写一个函数 list_of_rgb_colors 在数组中返回任意数量的 RGB 颜色。
+3.编写一个函数 generate_colors 可以生成任意数量的 hexa 或 rgb 颜色。
 
 ```py
    generate_colors('hexa', 3) # ['#a3e12f','#03ed55','#eb3d2b'] 
@@ -295,10 +293,10 @@ print(rgb_color_gen())
    generate_colors('rgb', 1)  # ['rgb(33,79, 176)']
    ```
 
-### Exercises: Level 3
+### 练习： 级别 3
 
-1. Call your function shuffle_list, it takes a list as a parameter and it returns a shuffled list
-1. Write a function which returns an array of seven random numbers in a range of 0-9. All the numbers must be unique.
+1. shuffle_list调用你的函数，它采用一个列表作为参数，并返回一个随机列表
+2. 编写一个函数，返回一个 0-9 范围内的 7 个随机数数组。所有数字都必须是唯一的。
 
 🎉 CONGRATULATIONS ! 🎉
 
