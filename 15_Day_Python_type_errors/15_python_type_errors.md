@@ -33,15 +33,15 @@
 
 # 📘 Day 15
 
-## Python Error Types
+## Python错误类型
 
-When we write code it is common that we make a typo or some other common error. If our code fails to run, the Python interpreter will display a message, containing feedback with information on where the problem occurs and the type of an error. It will also sometimes gives us suggestions on a possible fix. Understanding different types of errors in programming languages will help us to debug our code quickly and also it makes us better at what we do.
+当我们编写代码时，经常会出现拼写错误或其他常见错误。如果我们的代码无法运行，Python解释器将显示一条消息，其中包含有关问题发生位置和错误类型的反馈信息。它有时也会为我们提供可能的解决方案的建议。了解编程语言中不同类型的错误将有助于我们快速调试代码，也使我们在工作中做得更好。
 
-Let us see the most common error types one by one. First let us open our Python interactive shell. Go to your you computer terminal and write 'python'. The python interactive shell will be opened.
+让我们逐一查看最常见的错误类型。首先，让我们打开Python交互式shell。转到您的计算机终端并编写“python”。python交互式shell将被打开。
 
-### SyntaxError
+### 语法
 
-**Example 1: SyntaxError**
+**示例 1: SyntaxError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -56,7 +56,8 @@ SyntaxError: Missing parentheses in call to 'print'. Did you mean print('hello w
 >>>
 ```
 
-As you can see we made a syntax error because we forgot to enclose the string with parenthesis and Python already suggests the solution. Let us fix it.
+正如你所看到的，我们犯了一个语法错误，因为我们忘了用括号括住字符串，而Python已经给出了解决方案。让我们来解决它。
+
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -73,11 +74,11 @@ hello world
 >>>
 ```
 
-The error was a _SyntaxError_. After the fix our code was executed without a hitch. Let see more error types.
+示例1错误为_SyntaxError_。修复后，我们的代码执行得很顺利。查看更多错误类型。
 
-### NameError
+### 姓名
 
-**Example 1: NameError**
+**示例 2: NameError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -91,7 +92,7 @@ NameError: name 'age' is not defined
 >>>
 ```
 
-As you can see from the message above, name age is not defined. Yes, it is true that we did not define an age variable but we were trying to print it out as if we had had declared it. Now, lets fix this by declaring it and assigning with a value.
+正如您从上面的消息中看到的，没有定义姓名年龄。是的，我们确实没有定义年龄变量，但我们试图将其打印出来，就像我们已经声明了它一样。现在，让我们通过声明它并赋值来解决这个问题。
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -108,11 +109,11 @@ NameError: name 'age' is not defined
 >>>
 ```
 
-The type of error was a _NameError_. We debugged the error by defining the variable name.
+错误类型为_NameError_。我们通过定义变量名来调试错误。
 
-### IndexError
+### 索引错误
 
-**Example 1: IndexError**
+**示例 3: IndexError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -127,11 +128,11 @@ IndexError: list index out of range
 >>>
 ```
 
-In the example above, Python raised an _IndexError_, because the list has only indexes from 0 to 4 , so it was out of range.
+在上面的例子中，Python引发了_IndexError_，因为列表中只有0到4之间的索引，所以它超出了范围。
 
-### ModuleNotFoundError
+### 模块声音错误
 
-**Example 1: ModuleNotFoundError**
+**示例 4: ModuleNotFoundError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -145,7 +146,7 @@ ModuleNotFoundError: No module named 'maths'
 >>>
 ```
 
-In the example above, I added an extra s to math deliberately and _ModuleNotFoundError_ was raised. Lets fix it by removing the extra s from math.
+在上面的例子中，我故意在数学中添加了一个额外的s，并引发了_ModuleNotFoundError_。让我们通过从数学中删除多余的s来解决这个问题。
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -160,11 +161,11 @@ ModuleNotFoundError: No module named 'maths'
 >>>
 ```
 
-We fixed it, so let's use some of the functions from the math module.
+我们修复了它，所以让我们使用数学模块中的一些函数。
 
-### AttributeError
+### 属性错误
 
-**Example 1: AttributeError**
+**示例 5: AttributeError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -183,7 +184,7 @@ AttributeError: module 'math' has no attribute 'PI'
 >>>
 ```
 
-As you can see, I made a mistake again! Instead of pi, I tried to call a PI function from maths module. It raised an attribute error, it means, that the function does not exist in the module. Lets fix it by changing from PI to pi.
+如你所见，我又犯了一个错误！我尝试从数学模块调用pi函数，而不是pi。它引发了一个属性错误，这意味着该函数在模块中不存在。让我们通过将PI更改为PI来修复它。
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -204,11 +205,12 @@ AttributeError: module 'math' has no attribute 'PI'
 >>>
 ```
 
-Now, when we call pi from the math module we got the result.
+现在，当我们从数学模块调用pi时，我们得到了结果。
 
-### KeyError
+### 按键错误
 
-**Example 1: KeyError**
+
+**示例 6: KeyError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -225,7 +227,7 @@ KeyError: 'county'
 >>>
 ```
 
-As you can see, there was a typo in the key used to get the dictionary value. so, this is a key error and the fix is quite straight forward. Let's do this!
+如您所见，用于获取字典值的键中有一个拼写错误。所以，这是一个关键错误，修复方法非常简单。我们开始吧！
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -244,11 +246,12 @@ KeyError: 'county'
 >>>
 ```
 
-We debugged the error, our code ran and we got the value.
+我们调试了错误，运行了代码，得到了值。
 
-### TypeError
+### 类型错误
 
-**Example 1: TypeError**
+
+**示例 7: TypeError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -262,7 +265,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 >>>
 ```
 
-In the example above, a TypeError is raised because we cannot add a number to a string. First solution would be to convert the string to int or float. Another solution would be converting the number to a string (the result then would be '43'). Let us follow the first fix.
+在上面的示例中，由于我们无法向字符串中添加数字，因此引发了TypeError。第一种解决方案是将字符串转换为int或float。另一种解决方案是将数字转换为字符串（结果将是'43'）。让我们遵循第一个解决方案。
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -280,11 +283,13 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 >>>
 ```
 
-Error removed and we got the result we expected.
+错误已消除，我们得到了预期的结果。
 
-### ImportError
 
-**Example 1: TypeError**
+### 导入错误
+
+
+**示例 8: TypeError**
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -315,7 +320,7 @@ ImportError: cannot import name 'power' from 'math'
 >>>
 ```
 
-### ValueError
+### 值错误
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -331,7 +336,7 @@ ValueError: invalid literal for int() with base 10: '12a'
 
 In this case we cannot change the given string to a number, because of the 'a' letter in it.
 
-### ZeroDivisionError
+### 零除法错误
 
 ```py
 asabeneh@Asabeneh:~$ python
@@ -345,16 +350,16 @@ ZeroDivisionError: division by zero
 >>>
 ```
 
-We cannot divide a number by zero.
+我们不能把一个数除以零。
 
-We have covered some of the python error types, if you want to check more about it check the python documentation about python error types.
-If you are good at reading the error types then you will be able to fix your bugs fast and you will also become a better programmer.
+我们已经介绍了一些python错误类型，如果你想了解更多，请查看python文档中关于python错误类型的内容。
+如果你善于阅读错误类型，那么你将能够快速修复你的错误，你也将成为一名更好的程序员。
 
-🌕 You are excelling. You made it to half way to your way to greatness. Now do some exercises for your brain and for your muscle.
+🌕 你表现出色。你已经走到了通往伟大之路的一半。现在做一些锻炼大脑和肌肉的运动。
 
 ## 💻 Exercises: Day 15
 
-1. Open you python interactive shell and try all the examples covered in this section.
+1. 打开python交互式shell，尝试本节中介绍的所有示例。
 
 🎉 CONGRATULATIONS ! 🎉
 
