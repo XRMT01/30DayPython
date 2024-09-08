@@ -39,9 +39,9 @@ print(dir(datetime))
 ['MAXYEAR', 'MINYEAR', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'date', 'datetime', 'datetime_CAPI', 'sys', 'time', 'timedelta', 'timezone', 'tzinfo']
 ```
 
-With dir or help built-in commands it is possible to know the available functions in a certain module. As you can see, in the datetime module there are many functions, but we will focus on _date_, _datetime_, _time_ and _timedelta_. Let se see them one by one.
+使用dir或help内置命令，可以知道某个模块中的可用函数。如您所见，datetime模块中有许多函数，但我们将重点介绍_date_、_datetime_、_time_和_timedelta_。让我们逐一看看。
 
-### Getting *datetime* Information
+### 获取*日期时间*信息
 
 ```py
 from datetime import datetime
@@ -59,9 +59,9 @@ print('timestamp', timestamp)
 print(f'{day}/{month}/{year}, {hour}:{minute}')  # 8/7/2021, 7:38
 ```
 
-Timestamp or Unix timestamp is the number of seconds elapsed from 1st of January 1970 UTC.
+Timestamp或Unix Timestamp是从1970年1月1日UTC开始经过的秒数。
 
-### Formatting Date Output Using *strftime*
+### 使用*strftime格式化日期输出*
 
 ```py
 from datetime import datetime
@@ -78,7 +78,7 @@ print(f'{day}/{month}/{year}, {hour}:{minute}')  # 1/1/2020, 0:0
 
 ```
 
-Formatting date time using *strftime* method and the documentation can be found [here](https://strftime.org/).
+使用*strftime*方法格式化日期时间，文档可以在[此处]找到(https://strftime.org/).
 
 ```py
 from datetime import datetime
@@ -100,12 +100,12 @@ time one: 12/05/2019, 01:05:01
 time two: 05/12/2019, 01:05:01
 ```
 
-Here are all the _strftime_ symbols we use to format time. An example of all the formats for this module.
+以下是我们用来格式化时间的所有_strftime_符号。此模块所有格式的示例。
 
 ![strftime](../images/strftime.png)
 
-### String to Time Using *strptime*
-Here is a [documentation](https://www.programiz.com/python-programming/datetime/strptimet) hat helps to understand the format. 
+### 使用*strptime将字符串转换为时间*
+这是一份[文档](https://www.programiz.com/python-programming/datetime/strptimet)帽子有助于理解格式。
 
 ```py
 from datetime import datetime
@@ -120,7 +120,7 @@ date_string = 5 December, 2019
 date_object = 2019-12-05 00:00:00
 ```
 
-### Using *date* from *datetime*
+### 使用*date*from*datetime*
 
 ```py
 from datetime import date
@@ -134,7 +134,7 @@ print("Current month:", today.month) # 12
 print("Current day:", today.day)     # 5
 ```
 
-### Time Objects to Represent Time
+### 表示时间的时间对象
 
 ```py
 from datetime import time
@@ -158,7 +158,7 @@ b = 10:30:50
 c = 10:30:50  
 d = 10:30:50.200555
 
-### Difference Between Two Points in Time Using
+### 两个时间点使用的差异
 
 ```py
 today = date(year=2019, month=12, day=5)
@@ -173,7 +173,7 @@ diff = t2 - t1
 print('Time left for new year:', diff) # Time left for new year: 26 days, 23: 01: 00
 ```
 
-### Difference Between Two Points in Time Using *timedelata*
+### 使用*timedelata的两点时间差*
 
 ```py
 from datetime import timedelta
@@ -189,19 +189,19 @@ print("t3 =", t3)
     t3 = 86 days, 22:56:50
 ```
 
-🌕 You are an extraordinary. You are 16 steps a head to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 你真了不起。你在通往伟大的道路上已经领先了16步。现在来做些锻炼来活动你的大脑和肌肉吧。
 
 ## 💻 Exercises: Day 16
 
-1. Get the current day, month, year, hour, minute and timestamp from datetime module
-1. Format the current date using this format: "%m/%d/%Y, %H:%M:%S")
-1. Today is 5 December, 2019. Change this time string to time.
-1. Calculate the time difference between now and new year.
-1. Calculate the time difference between 1 January 1970 and now.
-1. Think, what can you use the datetime module for? Examples:
-   - Time series analysis
-   - To get a timestamp of any activities in an application
-   - Adding posts on a blog 
+1. 从 datetime 模块获取当前的日期（天、月、年）、时间（小时、分钟、秒）以及时间戳。
+2. 格式化当前日期，格式为：“%m/%d/%Y, %H:%M:%S”。
+3. 当前日期是 2019 年 12 月 5 日。将这个时间字符串转换为时间对象。
+4. 计算当前时间和新年之间的时差。
+5. 计算 1970 年 1 月 1 日到现在的时间差。
+6. 思考一下 datetime 模块可以用在哪些地方？例如：
+   - 时间序列分析
+   - 获取应用程序中任何活动的时间戳
+   - 博客上发布文章的时间记录
 
 🎉 CONGRATULATIONS ! 🎉
 
