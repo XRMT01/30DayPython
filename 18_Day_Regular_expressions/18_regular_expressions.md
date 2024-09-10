@@ -14,7 +14,7 @@
 </div>
 </div>
 
-[<< Day 17](../17_Day_Exception_handling/17_exception_handling.md) | [Day 19>>](../19_Day_File_handling/19_file_handling.md)
+[<< 第十七天](../17_Day_Exception_handling/17_exception_handling.md) | [第十九天>>](../19_Day_File_handling/19_file_handling.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
@@ -41,31 +41,30 @@
     - [Exercises: Level 2](#exercises-level-2)
     - [Exercises: Level 3](#exercises-level-3)
 
-# 📘 Day 18
+# 📘 第十八天
 
-## Regular Expressions
+## 正则表达式
 
-A regular expression or RegEx is a special text string that helps to find patterns in data. A RegEx can be used to check if some pattern exists in a different data type. To use RegEx in python first we should import the RegEx module which is called *re*.
+正则表达式或RegEx是一种特殊的文本字符串，有助于在数据中查找模式。RegEx可用于检查不同数据类型中是否存在某种模式。要在python中使用RegEx，首先我们应该导入名为*re*的RegEx模块。
+### *re*模块
 
-### The *re* Module
-
-After importing the module we can use it to detect or find patterns.
+导入模块后，我们可以使用它来检测或查找模式。
 
 ```py
 import re
 ```
 
-### Methods in *re* Module
+### *re*模块中的方法
 
-To find a pattern we use different set of *re* character sets that allows to search for a match in a string.
+为了找到一个模式，我们使用不同的*re*字符集，允许在字符串中搜索匹配项。
 
-- *re.match()*: searches only in the beginning of the first line of the string and returns matched objects if  found, else returns None.
-- *re.search*: Returns a match object if there is one anywhere in the string, including multiline strings.
-- *re.findall*: Returns a list containing all matches
-- *re.split*: Takes a string, splits it at the match points, returns a list
-- *re.sub*:  Replaces one or many matches within a string
+-*re.match（）*：仅在字符串第一行的开头搜索，如果找到匹配的对象，则返回匹配的对象；否则返回None。
+-*re.search*：如果字符串中任何位置都有匹配对象，包括多行字符串，则返回匹配对象。
+-*re.findall*：返回一个包含所有匹配项的列表
+-*re.split*：获取一个字符串，在匹配点处拆分它，返回一个列表
+-*re.sub*：替换字符串中的一个或多个匹配项
 
-#### Match
+#### 匹配
 
 ```py
 # syntac
@@ -90,7 +89,7 @@ substring = txt[start:end]
 print(substring)       # I love to teach
 ```
 
-As you can see from the example above, the pattern we are looking for (or the substring we are looking for) is *I love to teach*. The match function returns an object **only** if the text starts with the pattern.
+正如你从上面的例子中看到的，我们正在寻找的模式（或子字符串）是*我喜欢教*。如果文本以模式开头，match函数只返回一个对象**。
 
 ```py
 import re
@@ -100,7 +99,7 @@ match = re.match('I like to teach', txt, re.I)
 print(match)  # None
 ```
 
-The string does not string with *I like to teach*, therefore there was no match and the match method returned None.
+字符串中没有带*我喜欢教*的字符串，因此没有匹配，match方法返回None。
 
 #### Search
 
@@ -129,11 +128,11 @@ substring = txt[start:end]
 print(substring)       # first
 ```
 
-As you can see, search is much better than match because it can look for the pattern throughout the text. Search returns a match object with a first match that was found, otherwise it returns *None*. A much better *re* function is *findall*. This function checks for the pattern through the whole string and returns all the matches as a list.
+正如你所看到的，搜索比匹配好得多，因为它可以在整个文本中寻找模式。搜索返回一个匹配对象，其中包含找到的第一个匹配项，否则返回*None*。一个更好的*re*函数是*findall*。此函数检查整个字符串中的模式，并以列表形式返回所有匹配项。
 
-#### Searching for All Matches Using *findall*
+#### 使用*findall搜索所有匹配项*
 
-*findall()* returns all the matches as a list
+*findall（）*以列表形式返回所有匹配项
 
 ```py
 txt = '''Python is the most beautiful language that a human being has ever created.
@@ -144,8 +143,8 @@ matches = re.findall('language', txt, re.I)
 print(matches)  # ['language', 'language']
 ```
 
-As you can see, the word *language* was found two times in the string. Let us practice some more.
-Now we will look for both Python and python words in the string:
+如您所见，单词*language*在字符串中出现了两次。让我们再练习一些。
+现在我们将在字符串中查找Python和Python单词：
 
 ```py
 txt = '''Python is the most beautiful language that a human being has ever created.
@@ -157,7 +156,7 @@ print(matches)  # ['Python', 'python']
 
 ```
 
-Since we are using *re.I* both lowercase and uppercase letters are included. If we do not have the re.I flag, then we will have to write our pattern differently. Let us check it out:
+由于我们使用了*re.I*，因此包含了小写和大写字母。如果我们没有re.I标志，那么我们将不得不以不同的方式编写我们的模式。让我们来看看：
 
 ```py
 txt = '''Python is the most beautiful language that a human being has ever created.
@@ -172,7 +171,7 @@ print(matches)  # ['Python', 'python']
 
 ```
 
-#### Replacing a Substring
+#### 更换子字符串
 
 ```py
 txt = '''Python is the most beautiful language that a human being has ever created.
@@ -204,7 +203,7 @@ There is nothing as rewarding as educating and empowering people.
 I found teaching more interesting than any other jobs. Does this motivate you to be a teacher?
 ```
 
-## Splitting Text Using RegEx Split
+## 使用RegEx Split分割文本
 
 ```py
 txt = '''I am teacher and  I love teaching.
@@ -218,10 +217,10 @@ print(re.split('\n', txt)) # splitting using \n - end of line symbol
 ['I am teacher and  I love teaching.', 'There is nothing as rewarding as educating and empowering people.', 'I found teaching more interesting than any other jobs.', 'Does this motivate you to be a teacher?']
 ```
 
-## Writing RegEx Patterns
+## 编写RegEx模式
 
-To declare a string variable we use a single or double quote. To declare RegEx variable *r''*.
-The following pattern only identifies apple with lowercase, to make it case insensitive either we should rewrite our pattern or we should add a flag.  
+要声明字符串变量，我们使用单引号或双引号。声明RegEx变量*r''*。
+以下模式仅用小写字母标识苹果，为了使其不区分大小写，我们应该重写我们的模式，或者添加一个标志。
 
 ```py
 import re
@@ -272,11 +271,11 @@ print(matches)  # ['Apple', 'apple']
 
 ![Regular Expression cheat sheet](../images/regex.png)
 
-Let us use examples to clarify the meta characters above
+让我们用例子来澄清上面的元字符
 
-### Square Bracket
+### 方括号
 
-Let us use square bracket to include lower and upper case
+让我们用方括号来括上下壳体
 
 ```py
 regex_pattern = r'[Aa]pple' # this square bracket mean either A or a
@@ -285,7 +284,7 @@ matches = re.findall(regex_pattern, txt)
 print(matches)  # ['Apple', 'apple']
 ```
 
-If we want to look for the banana, we write the pattern as follows:
+如果我们想寻找香蕉，我们可以写下以下模式：
 
 ```py
 regex_pattern = r'[Aa]pple|[Bb]anana' # this square bracket means either A or a
@@ -294,9 +293,9 @@ matches = re.findall(regex_pattern, txt)
 print(matches)  # ['Apple', 'banana', 'apple', 'banana']
 ```
 
-Using the square bracket and or operator , we manage to extract Apple, apple, Banana and banana.
+使用方括号和/或运算符，我们设法提取苹果、苹果、香蕉和香蕉。
 
-### Escape character(\\) in RegEx
+### RegEx中的转义符（\\）
 
 ```py
 regex_pattern = r'\d'  # d is a special character which means digits
@@ -305,7 +304,7 @@ matches = re.findall(regex_pattern, txt)
 print(matches)  # ['6', '2', '0', '1', '9', '8', '2', '0', '2', '1'], this is not what we want
 ```
 
-### One or more times(+)
+### 一次或多次（+）
 
 ```py
 regex_pattern = r'\d+'  # d is a special character which means digits, + mean one or more times
@@ -314,7 +313,7 @@ matches = re.findall(regex_pattern, txt)
 print(matches)  # ['6', '2019', '8', '2021'] - now, this is better!
 ```
 
-### Period(.)
+### 周期（.）
 
 ```py
 regex_pattern = r'[a].'  # this square bracket means a and . means any character except new line
@@ -327,9 +326,9 @@ matches = re.findall(regex_pattern, txt)
 print(matches)  # ['and banana are fruits']
 ```
 
-### Zero or more times(\*)
+### 零次或多次（\*）
 
-Zero or many times. The pattern could may not occur or it can occur many times.
+零次或多次。该模式可能不会出现，也可能出现多次。
 
 ```py
 regex_pattern = r'[a].*'  # . any character, * any character zero or more times 
@@ -338,9 +337,9 @@ matches = re.findall(regex_pattern, txt)
 print(matches)  # ['and banana are fruits']
 ```
 
-### Zero or one time(?)
+### 零次或一次（？）
 
-Zero or one time. The pattern may not occur or it may occur once.
+零次或一次。该模式可能不会出现，也可能只出现一次。
 
 ```py
 txt = '''I am not sure if there is a convention how to write the word e-mail.
@@ -350,9 +349,9 @@ matches = re.findall(regex_pattern, txt)
 print(matches)  # ['e-mail', 'email', 'Email', 'E-mail']
 ```
 
-### Quantifier in RegEx
+### RegEx中的量化器
 
-We can specify the length of the substring we are looking for in a text, using a curly bracket. Let us imagine, we are interested in a substring with a length of 4 characters:
+我们可以使用花括号指定在文本中查找的子字符串的长度。让我们想象一下，我们对长度为4个字符的子字符串感兴趣：
 
 ```py
 txt = 'This regular expression example was made on December 6,  2019 and revised on July 8, 2021'
@@ -366,7 +365,7 @@ matches = re.findall(regex_pattern, txt)
 print(matches)  # ['6', '2019', '8', '2021']
 ```
 
-### Cart ^
+### 抓取 ^
 
 - Starts with
   
@@ -388,9 +387,9 @@ print(matches)  # ['6,', '2019', '8', '2021']
 
 ## 💻 Exercises: Day 18
 
-### Exercises: Level 1
+### 练习：第一关
 
- 1. What is the most frequent word in the following paragraph?
+ 1. 下一段中最常见的单词是什么？
 
 ```py
     paragraph = 'I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.
@@ -423,7 +422,7 @@ print(matches)  # ['6,', '2019', '8', '2021']
     ]
 ```
 
-2. The position of some particles on the horizontal x-axis are -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers from this whole text and find the distance between the two furthest particles.
+2. 一些粒子在水平x轴上的位置在负方向上为-12、-4、-3和-1，在原点为0，在正方向上为4和8。从整篇文章中提取这些数字，并找出两个最远粒子之间的距离。
 
 ```py
 points = ['-12', '-4', '-3', '-1', '0', '4', '8']
@@ -431,9 +430,9 @@ sorted_points =  [-12, -4, -3, -1, -1, 0, 2, 4, 8]
 distance = 8 -(-12) # 20
 ```
 
-### Exercises: Level 2
+### 练习：第二关
 
-1. Write a pattern which identifies if a string is a valid python variable
+1. 编写一个模式来标识字符串是否是有效的python变量
 
     ```sh
     is_valid_variable('first_name') # True
@@ -442,9 +441,9 @@ distance = 8 -(-12) # 20
     is_valid_variable('firstname') # True
     ```
 
-### Exercises: Level 3
+### 练习：第三关
 
-1. Clean the following text. After cleaning, count three most frequent words in the string.
+1. 清除以下文本。清理后，数一下字符串中最常见的三个单词。
 
     ```py
     sentence = '''%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?'''
