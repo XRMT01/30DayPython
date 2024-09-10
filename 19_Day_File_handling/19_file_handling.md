@@ -12,7 +12,7 @@
 </sub>
 </div>
 
-[<< Day 18](../18_Day_Regular_expressions/18_regular_expressions.md) | [Day 20 >>](../20_Day_Python_package_manager/20_python_package_manager.md)
+[<< 第十八天](../18_Day_Regular_expressions/18_regular_expressions.md) | [第二十天 >>](../20_Day_Python_package_manager/20_python_package_manager.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
@@ -35,38 +35,38 @@
     - [Exercises: Level 2](#exercises-level-2)
     - [Exercises: Level 3](#exercises-level-3)
 
-# 📘 Day 19
+# 📘 第十九天
 
-## File Handling
+## 文件处理
 
-So far we have seen different Python data types. We usually store our data in different file formats. In addition to handling files, we will also see different file formats(.txt, .json, .xml, .csv, .tsv, .excel) in this section. First, let us get familiar with handling files with common file format(.txt).
+到目前为止，我们已经看到了不同的Python数据类型。我们通常以不同的文件格式存储数据。除了处理文件外，我们还将在本节中看到不同的文件格式（.txt、.json、.xml、.csv、.tsv、excel）。首先，让我们熟悉如何处理常见文件格式（.txt）的文件。
 
-File handling is an import part of programming which allows us to create, read, update and delete files. In Python to handle data we use _open()_ built-in function.
+文件处理是编程的一个重要部分，它允许我们创建、读取、更新和删除文件。在Python中，我们使用_open（）_内置函数来处理数据。
 
 ```py
 # Syntax
 open('filename', mode) # mode(r, a, w, x, t,b)  could be to read, write, update
 ```
 
-- "r" - Read - Default value. Opens a file for reading, it returns an error if the file does not exist
-- "a" - Append - Opens a file for appending, creates the file if it does not exist
-- "w" - Write - Opens a file for writing, creates the file if it does not exist
-- "x" - Create - Creates the specified file, returns an error if the file exists
-- "t" - Text - Default value. Text mode
-- "b" - Binary - Binary mode (e.g. images)
+-“r”-读取-默认值。打开文件进行读取，如果文件不存在，则返回错误
+-“a”-附加-打开文件进行附加，如果文件不存在，则创建该文件
+-“w”-写入-打开文件进行写入，如果文件不存在，则创建该文件
+-“x”-创建-创建指定的文件，如果文件存在，则返回错误
+-“t”-文本-默认值。文本模式
+-“b”-二进制-二进制模式（例如图像）
 
-### Opening Files for Reading
+### 打开文件进行阅读
 
-The default mode of _open_ is reading, so we do not have to specify 'r' or 'rt'. I have created and saved a file named reading_file_example.txt in the files directory. Let us see how it is done:
+_open_的默认模式是读取，因此我们不必指定“r”或“rt”。我在files目录中创建并保存了一个名为reading_file_example.txt的文件。让我们看看它是如何做到的：
 
 ```py
 f = open('./files/reading_file_example.txt')
 print(f) # <_io.TextIOWrapper name='./files/reading_file_example.txt' mode='r' encoding='UTF-8'>
 ```
 
-As you can see in the example above, I printed the opened file and it gave  some information about it. Opened file has different reading methods: _read()_, _readline_, _readlines_. An opened file has to be closed with _close()_ method.
+正如你在上面的例子中看到的，我打印了打开的文件，它给出了一些关于它的信息。打开的文件有不同的读取方法：_read（）_、_readline_、_read lines_。打开的文件必须使用_close（）_方法关闭。
 
-- _read()_: read the whole text as string. If we want to limit the number of characters we want to read, we can limit it by passing int value to the *read(number)* method.
+-_read（）_：将整个文本作为字符串读取。如果我们想限制要读取的字符数，可以通过向*read（number）*方法传递int值来限制它。
 
 ```py
 f = open('./files/reading_file_example.txt')
@@ -83,7 +83,7 @@ This is an example to show how to open a file and read.
 This is the second line of the text.
 ```
 
-Instead of printing all the text, let us print the first 10 characters of the text file.
+让我们打印文本文件的前10个字符，而不是打印所有文本。
 
 ```py
 f = open('./files/reading_file_example.txt')
@@ -99,7 +99,7 @@ f.close()
 This is an
 ```
 
-- _readline()_: read only the first line
+-_readline（）_：只读第一行
 
 ```py
 f = open('./files/reading_file_example.txt')
@@ -115,7 +115,7 @@ f.close()
 This is an example to show how to open a file and read.
 ```
 
-- _readlines()_: read all the text line by line and returns a list of lines
+-_readlines（）_：逐行读取所有文本并返回行列表
 
 ```py
 f = open('./files/reading_file_example.txt')
@@ -131,7 +131,7 @@ f.close()
 ['This is an example to show how to open a file and read.\n', 'This is the second line of the text.']
 ```
 
-Another way to get all the lines as a list is using _splitlines()_:
+另一种将所有行作为列表获取的方法是使用_splitlines（）_： 
 
 ```py
 f = open('./files/reading_file_example.txt')
@@ -147,7 +147,7 @@ f.close()
 ['This is an example to show how to open a file and read.', 'This is the second line of the text.']
 ```
 
-After we open a file, we should close it. There is a high tendency of forgetting to close them. There is a new way of opening files using _with_ - closes the files by itself. Let us rewrite the the previous example with the _with_ method:
+打开文件后，我们应该关闭它。忘记关闭它们的可能性很高。有一种使用_with_打开文件的新方法，它会自动关闭文件。让我们用_with_方法重写前面的例子：
 
 ```py
 with open('./files/reading_file_example.txt') as f:
@@ -162,30 +162,30 @@ with open('./files/reading_file_example.txt') as f:
 ['This is an example to show how to open a file and read.', 'This is the second line of the text.']
 ```
 
-### Opening Files for Writing and Updating
+### 打开文件进行写入和更新
 
-To write to an existing file, we must add a mode as parameter to the _open()_ function:
+要写入现有文件，我们必须在_open（）_函数中添加一个mode作为参数：
 
-- "a" - append - will append to the end of the file, if the file does not it creates a new file.
-- "w" - write - will overwrite any existing content, if the file does not exist it creates.
+-“a”append将追加到文件末尾，如果文件没有追加，则创建一个新文件。
+-“w”-write-如果创建的文件不存在，将覆盖任何现有内容。
 
-Let us append some text to the file we have been reading:
+让我们将一些文本附加到我们一直在读取的文件中：
 
 ```py
 with open('./files/reading_file_example.txt','a') as f:
     f.write('This text has to be appended at the end')
 ```
 
-The method below creates a new file, if the file does not exist:
+如果文件不存在，下面的方法会创建一个新文件：
 
 ```py
 with open('./files/writing_file_example.txt','w') as f:
     f.write('This text will be written in a newly created file')
 ```
 
-### Deleting Files
+### 删除文件
 
-We have seen in previous section, how to make and remove a directory using _os_ module. Again now, if we want to remove a file we use _os_ module.
+我们在上一节中已经看到了如何使用_os_模块创建和删除目录。现在，如果我们想删除一个文件，我们可以使用_os_模块。
 
 ```py
 import os
@@ -193,7 +193,7 @@ os.remove('./files/example.txt')
 
 ```
 
-If the file does not exist, the remove method will raise an error, so it is good to use a condition like this:
+如果文件不存在，remove方法将引发错误，因此最好使用以下条件：
 
 ```py
 import os
@@ -203,15 +203,15 @@ else:
     print('The file does not exist')
 ```
 
-## File Types
+## 文件类型
 
-### File with txt Extension
+### 扩展名为txt的文件
 
-File with _txt_ extension is a very common form of data and we have covered it in the previous section. Let us move to the JSON file
+扩展名为_txt_的文件是一种非常常见的数据形式，我们在上一节中已经介绍过。让我们转到JSON文件
 
-### File with json Extension
+### 扩展名为json的文件
 
-JSON stands for JavaScript Object Notation. Actually, it is a stringified JavaScript object or Python dictionary.
+JSON代表JavaScript对象表示法。实际上，它是一个字符串化的JavaScript对象或Python字典。
 
 _Example:_
 
@@ -235,9 +235,9 @@ person_json = '''{
 }'''
 ```
 
-### Changing JSON to Dictionary
+### 将JSON转换为字典
 
-To change a JSON to a dictionary, first we import the json module and then we use _loads_ method.
+要将JSON转换为字典，首先我们导入JSON模块，然后使用_loads_方法。
 
 ```py
 import json
@@ -262,9 +262,9 @@ print(person_dct['name'])
 Asabeneh
 ```
 
-### Changing Dictionary to JSON
+### 将字典更改为JSON
 
-To change a dictionary to a JSON we use _dumps_ method from the json module.
+要将字典更改为JSON，我们使用JSON模块中的_dumps_方法。
 
 ```py
 import json
@@ -298,9 +298,9 @@ print(person_json)
 }
 ```
 
-### Saving as JSON File
+### 另存为JSON文件
 
-We can also save our data as a json file. Let us save it as a json file using the following steps. For writing a json file, we use the json.dump() method, it can take dictionary, output file, ensure_ascii and indent.
+我们还可以将数据保存为json文件。让我们使用以下步骤将其保存为json文件。对于编写json文件，我们使用json.dump（）方法，它可以接受字典、输出文件、ensure_ascii和indent。
 
 ```py
 import json
@@ -315,20 +315,20 @@ with open('./files/json_example.json', 'w', encoding='utf-8') as f:
     json.dump(person, f, ensure_ascii=False, indent=4)
 ```
 
-In the code above, we use encoding and indentation. Indentation makes the json file easy to read.
+在上面的代码中，我们使用了编码和缩进。缩进使json文件易于阅读。
 
-### File with csv Extension
+### 扩展名为csv的文件
 
-CSV stands for comma separated values. CSV is a simple file format used to store tabular data, such as a spreadsheet or database. CSV is a very common data format in data science.
+CSV代表逗号分隔的值。CSV是一种简单的文件格式，用于存储表格数据，如电子表格或数据库。CSV是数据科学中非常常见的数据格式。
 
-**Example:**
+**示例：**
 
 ```csv
-"name","country","city","skills"
-"Asabeneh","Finland","Helsinki","JavaScript"
+“姓名”、“国家”、“城市”、“技能”
+“Asabeneh”、“芬兰”、“赫尔辛基”、“JavaScript”
 ```
 
-**Example:**
+**示例：**
 
 ```py
 import csv
@@ -353,9 +353,9 @@ Column names are :name, country, city, skills
 Number of lines:  2
 ```
 
-### File with xlsx Extension
+### 扩展名为xlsx的文件
 
-To read excel files we need to install _xlrd_ package. We will cover this after we cover package installing using pip.
+要读取excel文件，我们需要安装_xlrd_包。我们将在介绍使用pip安装软件包后再介绍这一点。
 
 ```py
 import xlrd
@@ -364,10 +364,10 @@ print(excel_book.nsheets)
 print(excel_book.sheet_names)
 ```
 
-### File with xml Extension
+### 扩展名为xml的文件
 
-XML is another structured data format which looks like HTML. In XML the tags are not predefined. The first line is an XML declaration. The person tag is the root of the XML. The person has a gender attribute.
-**Example:XML**
+XML是另一种看起来像HTML的结构化数据格式。在XML中，标签不是预定义的。第一行是XML声明。person标签是XML的根。该人具有性别属性。
+**示例：XML**
 
 ```xml
 <?xml version="1.0"?>
@@ -409,14 +409,14 @@ field: skills
 
 ## 💻 Exercises: Day 19
 
-### Exercises: Level 1
+### 练习：第一关
 
-1. Write a function which count number of lines and number of words in a text. All the files are in the data the folder:
-   a) Read obama_speech.txt file and count number of lines and words
-   b) Read michelle_obama_speech.txt file and count number of lines and words
-   c) Read donald_speech.txt file and count number of lines and words
-   d) Read melina_trump_speech.txt file and count number of lines and words
-2. Read the countries_data.json data file in data directory, create a function that finds the ten most spoken languages
+1. 编写一个函数，计算文本中的行数和字数。所有文件都在data文件夹中：
+a） 读取obama_speech.txt文件并计算行数和单词数
+b） 读取michele_obama_speech.txt文件并计算行数和单词数
+c） 读取donald_speech.txt文件并计算行数和单词数
+d） 读取melina_trump_speech.txt文件并计算行数和单词数
+2. 读取data目录中的countries _data.json数据文件，创建一个查找十种最常用语言的函数
 
    ```py
    # Your output should look like this
@@ -440,7 +440,7 @@ field: skills
    (25, 'Arabic')]
    ```
 
-3. Read the countries_data.json data file in data directory, create a function that creates a list of the ten most populated countries
+3. 读取data目录中的countries _data.json数据文件，创建一个函数，创建人口最多的十个国家的列表
 
    ```py
    # Your output should look like this
@@ -469,10 +469,10 @@ field: skills
    ]
    ```
 
-### Exercises: Level 2
+### 练习：第二关
 
-4. Extract all incoming email addresses as a list from the email_exchange_big.txt file.
-5. Find the most common words in the English language. Call the name of your function find_most_common_words, it will take two parameters - a string or a file and a positive integer, indicating the number of words. Your function will return an array of tuples in descending order. Check the output
+4. 从email_exchange_big.txt文件中提取所有收到的电子邮件地址作为列表。
+5. 找出英语中最常见的单词。调用函数find_most_common_words的名称，它将接受两个参数——一个字符串或一个文件和一个正整数，表示单词的数量。您的函数将返回一个按降序排列的元组数组。检查输出
 
 ```py
     # Your output should look like this
@@ -498,19 +498,19 @@ field: skills
     (5, 'and')]
 ```
 
-6. Use the function, find_most_frequent_words to find:
-   a) The ten most frequent words used in [Obama's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/obama_speech.txt)
-   b) The ten most frequent words used in [Michelle's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/michelle_obama_speech.txt)
-   c) The ten most frequent words used in [Trump's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/donald_speech.txt)
-   d) The ten most frequent words used in [Melina's speech](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/melina_trump_speech.txt)
-7. Write a python application that checks similarity between two texts. It takes a file or a string as a parameter and it will evaluate the similarity of the two texts. For instance check the similarity between the transcripts of [Michelle's](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/michelle_obama_speech.txt) and [Melina's](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/melina_trump_speech.txt) speech. You may need a couple of functions, function to clean the text(clean_text), function to remove support words(remove_support_words) and finally to check the similarity(check_text_similarity). List of [stop words](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/stop_words.py) are in the data directory
-8. Find the 10 most repeated words in the romeo_and_juliet.txt
-9. Read the [hacker news csv](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/hacker_news.csv) file and find out:
-   a) Count the number of lines containing python or Python
-   b) Count the number lines containing JavaScript, javascript or Javascript
-   c) Count the number lines containing Java and not JavaScript
+6. 使用函数find_most_frequent_words查找：
+a） [奥巴马演讲]中最常用的十个词(https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/obama_speech.txt)
+b） [米歇尔演讲]中最常用的十个词(https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/michelle_obama_speech.txt)
+c） [特朗普演讲]中最常用的十个词(https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/donald_speech.txt)
+d） [梅琳娜演讲]中最常用的十个词(https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/melina_trump_speech.txt)
+7. 编写一个python应用程序来检查两个文本之间的相似性。它接受一个文件或字符串作为参数，并将评估两个文本的相似性。例如，检查[Michelle的]成绩单之间的相似性(https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/michelle_obama_speech.txt)和[梅丽娜的](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/melina_trump_speech.txt)演讲。您可能需要几个函数，清理文本的函数（clean_text），删除支持词的函数（remove_support_words），最后检查相似性的函数（check_text_similarity）。[停用词]列表(https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/stop_words.py)位于数据目录中
+8. 在romeo_and_juliet.txt中查找重复次数最多的10个单词
+9. 阅读[黑客新闻csv](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/hacker_news.csv)文件并找出：
+a） 统计包含python或python的行数
+b） 统计包含JavaScript、JavaScript或JavaScript的行数
+c） 统计包含Java而非JavaScript的行数
 
-### Exercises: Level 3
+### 练习：第三关
 
 🎉 CONGRATULATIONS ! 🎉
 
