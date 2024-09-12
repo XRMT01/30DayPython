@@ -22,34 +22,34 @@
     - [What is Web Scrapping](#what-is-web-scrapping)
   - [💻 Exercises: Day 22](#-exercises-day-22)
 
-# 📘 Day 22
+# 📘 第二十二天
 
-## Python Web Scraping
+##Python Web抓取
 
-### What is Web Scrapping
+###什么是网络剪贴
 
-The internet is full of huge amount of data which can be used for different purposes. To collect this data we need to know how to scrape data from a website.
+互联网上充满了可用于不同目的的大量数据。为了收集这些数据，我们需要知道如何从网站上抓取数据。
 
-Web scraping is the process of extracting and collecting data from websites and storing it on a local machine or in a database.
+网络抓取是从网站中提取和收集数据并将其存储在本地计算机或数据库中的过程。
 
-In this section, we will use beautifulsoup and requests package to scrape data. The package version we are using is beautifulsoup 4.
+在本节中，我们将使用beautifulsoup和requests包来抓取数据。我们使用的包版本是beautifulsoup 4。
 
-To start scraping websites you need _requests_, _beautifoulSoup4_ and a _website_.
+要开始抓取网站，您需要_requests_、_beautifoulSoup4_和_website_。
 
 ```sh
 pip install requests
 pip install beautifulsoup4
 ```
 
-To scrape data from websites, basic understanding of HTML tags and CSS selectors is needed. We target content from a website using HTML tags, classes or/and ids.
-Let us import the requests and BeautifulSoup module
+要从网站上抓取数据，需要对HTML标签和CSS选择器有基本的了解。我们使用HTML标签、类或/和id定位网站内容。
+让我们导入请求和BeautifulSoup模块
 
 ```py
 import requests
 from bs4 import BeautifulSoup
 ```
 
-Let us declare url variable for the website which we are going to scrape.
+让我们为要抓取的网站声明url变量。
 
 ```py
 
@@ -69,7 +69,7 @@ print(status) # 200 means the fetching was successful
 200
 ```
 
-Using beautifulSoup to parse content from the page
+使用beautifulSoup解析页面内容
 
 ```py
 import requests
@@ -92,16 +92,16 @@ for td in table.find('tr').find_all('td'):
     print(td.text)
 ```
 
-If you run this code, you can see that the extraction is half done. You can continue doing it because it is part of exercise 1.
-For reference check the [beautifulsoup documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#quick-start)
+如果运行此代码，您可以看到提取已完成一半。你可以继续做，因为这是练习1的一部分。
+如需参考，请查阅[beautifulsoup文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#quick-开始）
 
-🌕 You are so special, you are progressing everyday. You are left with only eight days to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 你很特别，你每天都在进步。你只有八天的时间走向伟大。现在做一些锻炼你的大脑和肌肉。
 
-## 💻 Exercises: Day 22
+## 💻 练习：第22天
 
-1. Scrape the following website and store the data as json file(url = 'http://www.bu.edu/president/boston-university-facts-stats/').
-1. Extract the table in this url (https://archive.ics.uci.edu/ml/datasets.php) and change it to a json file
-2. Scrape the presidents table and store the data as json(https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States). The table is not very structured and the scrapping may take very long time.
+1. 抓取以下网站并将数据存储为json文件（url='http://www.bu.edu/president/boston-university-facts-stats/').
+2. 提取此url中的表(https://archive.ics.uci.edu/ml/datasets.php)并将其更改为json文件
+3. 废弃presidents表，将数据存储为json格式(https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States). 表格结构不太合理，报废可能需要很长时间time.
 
 🎉 CONGRATULATIONS ! 🎉
 
