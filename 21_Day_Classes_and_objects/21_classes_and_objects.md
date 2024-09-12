@@ -33,7 +33,7 @@
     - [Exercises: Level 2](#exercises-level-2)
     - [Exercises: Level 3](#exercises-level-3)
 
-# 📘 Day 21
+# 📘 第二十一天
 
 ## Classes and Objects
 
