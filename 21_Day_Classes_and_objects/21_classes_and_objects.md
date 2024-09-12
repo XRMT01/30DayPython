@@ -14,11 +14,11 @@
 
 </div>
 
-[<< Day 20](../20_Day_Python_package_manager/20_python_package_manager.md) | [Day 22 >>](../22_Day_Web_scraping/22_web_scraping.md)
+[<< 第二十天](../20_Day_Python_package_manager/20_python_package_manager.md) | [第二十二天 >>](../22_Day_Web_scraping/22_web_scraping.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 21](#-day-21)
+- [📘 第二十一天](#-day-21)
   - [Classes and Objects](#classes-and-objects)
     - [Creating a Class](#creating-a-class)
     - [Creating an Object](#creating-an-object)
