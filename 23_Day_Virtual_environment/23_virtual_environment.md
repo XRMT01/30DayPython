@@ -13,27 +13,27 @@
 </sub>
 </div>
 
-[<< Day 22](../22_Day_Web_scraping/22_web_scraping.md) | [Day 24 >>](../24_Day_Statistics/24_statistics.md)
+[<< 第二十二天](../22_Day_Web_scraping/22_web_scraping.md) | [第二十四天 >>](../24_Day_Statistics/24_statistics.md)
 
 ![30DaysOfPython](../images/30DaysOfPython_banner3@2x.png)
 
-- [📘 Day 23](#-day-23)
+- [📘 第二十三天](#-day-23)
   - [Setting up Virtual Environments](#setting-up-virtual-environments)
   - [💻 Exercises: Day 23](#-exercises-day-23)
 
 # 📘 Day 23
 
-## Setting up Virtual Environments
+## 设置虚拟环境
 
-To start with project, it would be better to have a virtual environment. Virtual environment can help us to create an isolated or separate environment. This will help us to avoid conflicts in dependencies across projects. If you write pip freeze on your terminal you will see all the installed packages on your computer. If we use virtualenv, we will access only packages which are specific for that project. Open your terminal and install virtualenv
+从项目开始，最好有一个虚拟环境。虚拟环境可以帮助我们创建一个孤立或独立的环境。这将有助于我们避免项目之间的依赖关系冲突。如果你在终端上写pip freeze，你会在电脑上看到所有安装的软件包。如果我们使用virtualenv，我们将只访问特定于该项目的包。打开终端并安装virtualenv
 
 ```sh
 asabeneh@Asabeneh:~$ pip install virtualenv
 ```
 
-Inside the 30DaysOfPython folder create a flask_project folder.
+在30DaysOfPython文件夹中创建一个flask_project文件夹。
 
-After installing the virtualenv package go to your project folder and create a virtual env by writing:
+安装virtualenv包后，转到项目文件夹，通过编写以下命令创建虚拟环境：
 
 For Mac/Linux:
 ```sh
@@ -46,46 +46,46 @@ For Windows:
 C:\Users\User\Documents\30DaysOfPython\flask_project>python -m venv venv
 ```
 
-I prefer to call the new project venv, but feel free to name it differently. Let us check if the the venv was created by using ls (or dir for windows command prompt) command.
+我更喜欢称这个新项目为venv，但可以随意用不同的名字来命名。让我们检查venv是否是使用ls（或windows命令提示符的dir）命令创建的。
 
 ```sh
 asabeneh@Asabeneh:~/Desktop/30DaysOfPython/flask_project$ ls
 venv/
 ```
 
-Let us activate the virtual environment by writing the following command at our project folder.
+让我们通过在项目文件夹中编写以下命令来激活虚拟环境。
 
 For Mac/Linux:
 ```sh
 asabeneh@Asabeneh:~/Desktop/30DaysOfPython/flask_project$ source venv/bin/activate
 ```
-Activation of the virtual environment in Windows may very on Windows Power shell and git bash. 
+在Windows中激活虚拟环境可能非常依赖于Windows Power shell和git bash。
 
 For Windows Power Shell:
 ```sh
 C:\Users\User\Documents\30DaysOfPython\flask_project> venv\Scripts\activate
 ```
 
-For Windows Git bash:
+对于Windows Git bash：
 ```sh
 C:\Users\User\Documents\30DaysOfPython\flask_project> venv\Scripts\. activate
 ```
 
-After you write the activation command, your project directory will start with venv. See the example below.
+编写激活命令后，您的项目目录将以venv开头。请参阅下面的示例。
 
 ```sh
 (venv) asabeneh@Asabeneh:~/Desktop/30DaysOfPython/flask_project$
 ```
 
-Now, lets check the available packages in this project by writing pip freeze. You will not see any packages.
+现在，让我们通过编写pip freeze来检查此项目中的可用包。您将看不到任何包裹。
 
-We are going to do a small flask project so let us install flask package to this project.
+我们要做一个Flask 应用程序项目，所以让我们为这个项目安装Flask 应用程序包。
 
 ```sh
 (venv) asabeneh@Asabeneh:~/Desktop/30DaysOfPython/flask_project$ pip install Flask
 ```
 
-Now, let us write pip freeze to see a list of installed packages in the project:
+现在，让我们编写pip freeze来查看项目中已安装的软件包列表：
 
 ```sh
 (venv) asabeneh@Asabeneh:~/Desktop/30DaysOfPython/flask_project$ pip freeze
@@ -97,17 +97,17 @@ MarkupSafe==1.1.1
 Werkzeug==0.16.0
 ```
 
-When you finish you should dactivate active project using _deactivate_.
+完成后，您应该使用_deactivate_编辑活动项目。
 
 ```sh
 (venv) asabeneh@Asabeneh:~/Desktop/30DaysOfPython$ deactivate
 ```
 
-The necessary modules to work with flask are installed. Now, your project directory is ready for a flask project. You should include the venv to your .gitignore file not to push it to github.
+安装了使用Flask 应用程序需的模块。现在，您的项目目录已准备好进行Flask 应用程序项目。您应该将venv包含到.gitignore文件中，而不是将其推送到github。
 
-## 💻 Exercises: Day 23
+## 💻 练习: Day 23
 
-1. Create a project directory with a virtual environment based on the example given above.
+1. 基于上述示例，使用虚拟环境创建项目目录。
 
 🎉 CONGRATULATIONS ! 🎉
 
